@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://d858tjp2xjbi"]
+
+[ext_resource type="Script" uid="uid://c0iok3piam11y" path="res://crude_blackjack/table.gd" id="1_1nxsd"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1nxsd")
+
+[node name="Dealer" type="RichTextLabel" parent="."]
+offset_left = 480.0
+offset_top = 119.0
+offset_right = 580.0
+offset_bottom = 169.0
+scale = Vector2(2.44, 1.16)
+
+[node name="Player" type="RichTextLabel" parent="."]
+offset_left = 492.0
+offset_top = 410.0
+offset_right = 592.0
+offset_bottom = 460.0
+scale = Vector2(2.24001, 1)
+
+[node name="Hit" type="Button" parent="."]
+offset_left = 457.0
+offset_top = 528.0
+offset_right = 497.0
+offset_bottom = 548.0
+text = "Hit"
+
+[node name="Stand" type="Button" parent="."]
+offset_left = 524.0
+offset_top = 526.0
+offset_right = 577.0
+offset_bottom = 557.0
+text = "Stand
+"
+
+[connection signal="pressed" from="Hit" to="." method="_on_hit_pressed"]
+[connection signal="pressed" from="Stand" to="." method="_on_stand_pressed"]
